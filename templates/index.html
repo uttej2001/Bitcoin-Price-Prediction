@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	
+</head>
+<body style="background-color: #050633;">
+
+	<header style="background-image:url(/static/bt.gif); background-repeat: no-repeat;  background-position:top;  background-size :800px 300px;">
+		<div class="container">
+			
+
+			<h2 style="height: 200px; width:500px; font-size: 36px;
+			line-height: 40px;margin: 1em 0 0.5em 0;
+			color: #fdf7f7;
+			padding-left:400px;
+			font-weight: normal;
+			font-family: 'Ultra', sans-serif;   
+			font-size: 36px;
+			line-height: 42px;
+			text-transform: uppercase;
+			text-shadow: 0 2px white, 0 3px #777; text-align:center;  padding-top:100px">Bitcoin price Prediction</h2>
+		
+    </div>
+</header>		
+	
+	
+	
+     <div class="ml" style="position:relative; left:80px; top:2px">
+		<form action="{{ url_for('predict')}}" id="inputform" method="POST">
+		<p style="color: aliceblue; font-size:25px;">Select date</p>
+		<!-- <input type="text" name="comment"/> -->
+		<input type="date" name="dte" min="2015-10-31" max="2021-10-16" style="size: 35px; padding-top:1px">
+		<br>
+		<label for="noofday" style="color: aliceblue;font-size:25px;padding-bottom:3px;position:relative">Choose number of future days for bitcoin prediction:</label>
+        <select id="days" name="noofday" form="inputform">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+		<option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+		<option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+		<option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        
+        </select>
+		<br/>
+
+		<input type="submit" class="btn-info" style="background-color:cadetblue;height:35px;
+		width:100px; transition-duration: 0.4s;" value="predict">
+		
+	</form>
+		
+	</div>
+
+</body>
+</html>
