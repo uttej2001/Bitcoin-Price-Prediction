@@ -1,6 +1,5 @@
 # BitcoinPredictionApp
 
-Link to the app: https://bitcoin-pred-app.herokuapp.com/
 
 * Project :  Bitcoin Prices Predictions for next (X) days using Neural Network (LSTM Model) - Python 
 
