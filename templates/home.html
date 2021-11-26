@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Price Prediction</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="p-1 mx-auto mt-1" style="width: 38%; background-color: rgb(223, 223, 223);">
+        <div class="card border-dark">
+
+            <img class="card-img-top"
+                src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                alt="Card image cap">
+
+            <form action="{{ url_for('predict') }}" method="POST">
+
+                <div class="card-header bg-transparent border-dark font-italic">
+                    LSTM model
+                </div>
+
+                <div class="card-body">
+                    <h1 class="title is-1 mb-3">Bitcoin Price Prediction</h1>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="date">Date - First day of prediction:</label>
+                        </div>
+                        <input id="date" type="date" name="date" min="2015-10-31" max="2021-10-16" required
+                            class="form-control">
+                    </div>
+
+                    <div class="input-group mb-8">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="days">Number of future
+                                days to predict for:</label>
+                        </div>
+                        <select class="custom-select" name="n" id="days">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="card-footer text-center bg-transparent border-dark">
+                    <button type="submit" class="btn btn-info btn-lg" style="width: 35%;">Predict</button>
+                    <button type="reset" class="btn btn-danger btn-lg" style="width: 35%;">Reset</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

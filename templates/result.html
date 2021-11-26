@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <h1 class="title is-1 mb-4 p-4 bg-dark text-white">Results for Prediction</h1>
+
+    <div class="ml-5">
+        <p class="font-weight-bold h3 mb-4">
+            Next {{n}} days Prediction (from {{date[8:]}}/{{date[5:7]}}/{{date[0:4]}}) :
+        </p>
+        <ul class="list-group list-group-flush">
+            {%for i in range(0,len)%}
+            <li class="list-group-item">Day {{i+1}}: $ {{res[i][0]}}</li>
+            {%endfor%}
+        </ul>
+    </div>
+
+    <div>
+        <!--RMSE Score: {{trainScore}}-->
+    </div>
+    <div>
+        <!-- <img src="data:image/png;base64, {{ plot_url }}">-->
+    </div>
+</body>
+
+</html>
