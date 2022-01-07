@@ -2,7 +2,7 @@
 
 
 * Project :  Bitcoin Prices Predictions for next (X) days using Neural Network (LSTM Model) - Python 
-### [Deployed Link]()
+### [Deployed Link](bitcoin-pred-app.herokuapp.com/)
 ## Overview:
 
 * Data Scaling 
